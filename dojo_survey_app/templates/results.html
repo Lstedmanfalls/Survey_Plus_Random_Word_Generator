@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Results</title>
+    {% load static %}
+    <link rel = "stylesheet" href = "{% static 'results.css' %}">
+</head>
+<body>
+    <div id = "wrapper">
+        <h1>Your Results</h1>
+        <h2>These are the results of your survey</h2>
+        <div id = "results">
+            <p><span class = "label">Your Name is:</span> {{request.session.name}}</p>
+            <p><span class = "label">Your Location is:</span> {{request.session.location}}</p>
+            <p><span class = "label">Your Favorite Programming Language is:</span> {{request.session.language}}</p>
+            <p><span class = "label">Your Comments are:</span>{{request.session.comments}}</p>
+        </div>
+    </div>
+</body>
+</html>

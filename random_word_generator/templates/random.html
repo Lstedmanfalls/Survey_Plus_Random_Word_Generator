@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'random.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <section id ="attempt">
+            <h1>Random Word Generator</p>
+            <h2>Test your luck and see if you can generate a real word from random letter combinations!</h2>
+            <p>This is your attempt #: {{request.session.attempts}}</p>
+                <a href ="">
+                    <button type ="submit">Generate Word</button>
+                </a>
+        </section>
+        <section id="random_word">
+            <p>{{rand_word}}</p>
+        </section>
+        <a href="reset">
+            <button type ="submit">Reset</button>
+        </a>    
+    </div>
+</body>
+</html>
